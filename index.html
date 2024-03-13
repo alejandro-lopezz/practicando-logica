@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica con JavaScript</title>
+    <script>
+
+        let usuario = "alex"
+        let contrasenha = "alura123"
+        let intentos = 0
+        let intentosMaximos = 3 
+
+        while(intentos < intentosMaximos) {
+
+            let usuarioIgresado = prompt("Ingresa tu usuario:")
+            let contrasenhaIngresada = prompt("Ingresa tu contraseña:")
+
+            if(usuarioIgresado == usuario && contrasenhaIngresada == contrasenha) {
+                alert(`Bienvenido de nuevo ${usuario}`)
+                break; 
+            } else {
+                alert("Usuario o contraseña incorrecta, intentelo de nuevo")
+                intentos++
+            }
+
+            if(intentos == 3) {
+                alert("Número maximo de intentos, intentelo de nuevo mas tarde")
+            }
+
+        }
+
+    </script>
+</head>
+<body style="background-color: gray;">
+    <h1>Inicio de sesión</h1>
+</body>
+</html>
